@@ -1,0 +1,55 @@
+Undefined
+
+1)Whenever we declare a variable without assigning any value to it, javascript implicitly assigns its value as 
+undefined.
+
+  let name;
+  console.log(name); //undefined
+  
+2) When value is not assigned in array or object
+
+  let numArray = [1,2,,4];
+  console.log(numArray);  
+  //[1, 2, empty, 4]
+  typeof(numArray[2])
+  //"undefined"
+  
+3) When functions don’t have a return statement but are called for assigning a value to a variable.
+
+  let add = (a,b) => {
+  let c = a+b;
+  //return c;
+  }
+  let sum = add(2,3);
+  console.log(sum); 
+
+
+
+Not defined
+
+A not defined is a variable which is not declared at a given point of time with declaration keyword like var, 
+let or const.
+
+  console.log(a);
+  var a = 5;
+
+While if we don’t use var keyword above the output will be:-
+
+  console.log(b);
+  b = 5;
+  //Output:- "ReferenceError: b is not defined
+  
+The reason why the variable a was printed with undefined value above but b was declared as not defined was 
+because of the way variable hoisting works in javascript i.e. 
+the variable declarations are processed before code execution takes place in javascript.
+
+Internally the execution for the variable a above was as follows:-
+
+  var a;
+  console.log(a); //undefined
+  a = 5;
+  
+While for variable b above it was as follows:-
+
+  console.log(b); // b is not defined
+  window.b = 5;

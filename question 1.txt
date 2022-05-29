@@ -1,0 +1,25 @@
+var is the variable can initislied as many time as we want
+   var tester = "hey hi";
+    
+    function newFunction() {
+        var hello = "hello";
+    }
+    console.log(hello);
+
+
+let is variable is initilsied once and then we only update value of it
+   let greeting = "say Hi";
+   let times = 4;
+
+   if (times > 3) {
+        let hello = "say Hello instead";
+        console.log(hello);// "say Hello instead"
+    }
+   console.log(hello) // hello is not defined
+
+
+
+const 
+Variables declared with the const maintain constant values
+
+ const greeting = "say Hi";
